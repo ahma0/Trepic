@@ -4,8 +4,10 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@Getter
 @Entity
 @NoArgsConstructor
 public class Member extends BaseTime {
@@ -21,6 +23,9 @@ public class Member extends BaseTime {
 
     @Column(length = 50, nullable = false)
     private String password;
+
+    @Column(length = 20, nullable = false)
+    private String nickname;
 
     @Email
     @Column(length = 30, nullable = false)
