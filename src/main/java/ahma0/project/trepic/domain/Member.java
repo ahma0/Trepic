@@ -19,7 +19,7 @@ public class Member extends BaseTime {
 
     @NotBlank
     @Column(length = 10, nullable = false)
-    private String id;
+    private String idUsedByMember;
 
     @Column(length = 50, nullable = false)
     private String password;
@@ -35,9 +35,10 @@ public class Member extends BaseTime {
     private String profile;
 
     @Builder
-    public Member(String id, String password, String email, String profile) {
-        this.id = id;
+    public Member(String idUsedByMember, String password, String nickname, String email, String profile) {
+        this.idUsedByMember = idUsedByMember;
         this.password = password;
+        this.nickname = nickname;
         this.email = email;
         this.profile = profile;
     }
