@@ -2,13 +2,10 @@ package ahma0.project.trepic.service;
 
 
 import ahma0.project.trepic.domain.Member;
-import ahma0.project.trepic.dto.MemberRequestDto;
 import ahma0.project.trepic.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor

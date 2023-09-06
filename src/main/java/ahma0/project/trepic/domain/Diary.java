@@ -8,6 +8,7 @@ public class Diary extends BaseTime{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "diary_id", nullable = false)
     private Long diaryId;
 
     @NotBlank
