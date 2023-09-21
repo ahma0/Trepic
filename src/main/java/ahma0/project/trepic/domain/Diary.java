@@ -2,8 +2,13 @@ package ahma0.project.trepic.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@Getter
 @Entity
+@NoArgsConstructor
 public class Diary extends BaseTime{
 
     @Id
@@ -22,4 +27,11 @@ public class Diary extends BaseTime{
     @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "member_id", referencedColumnName = "member_id")
     private Member writer;
+
+    @Builder
+    public Diary(String title, String content, Member writer) {
+        this.title = title;
+        this.content = content;
+        this.writer = writer;
+    }
 }
